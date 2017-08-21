@@ -39,7 +39,7 @@ class WeatherService {
                             let weatherArray: NSArray = (weatherJsonData["weather"] as? NSArray)!
                             let weatherDictionary: NSDictionary = weatherArray[0] as! NSDictionary
                             
-                            let weatherMain = weatherDictionary["main"] as? String
+                           // let weatherMain = weatherDictionary["main"] as? String
                             let desc = weatherDictionary["description"] as? String
                             let icon = weatherDictionary["icon"] as? String
                             
