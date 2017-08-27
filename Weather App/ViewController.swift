@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController, WeatherServiceDelegate {
 
     let weatherService = WeatherService()
 
     
+    @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -54,6 +56,17 @@ class ViewController: UIViewController, WeatherServiceDelegate {
         descriptionLabel.text = weather.description
         
         // тут будет вставляться анимация!
+     
+       
+        let animationView = LOTAnimationView(name: weather.icon)
+        self.view.addSubview(animationView)
+        animationView.frame.origin.x = 160                  //x position
+        animationView.frame.origin.y = 20                   //y position
+        animationView.autoReverseAnimation = true
+        animationView.loopAnimation = true
+        animationView.play()
+            // Do Something
+        
     }
     
     
