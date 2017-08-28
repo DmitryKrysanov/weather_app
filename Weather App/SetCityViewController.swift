@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetCityViewController: ViewController {
+class SetCityViewController: MainPageViewController {
     
 
 

@@ -13,11 +13,20 @@ struct Weather {
     let temp: Int
     let description: String
     let icon: String
-    
-    init(cityName: String, temp: Int, description: String, icon: String) {
+    let humidity: Int
+    let windSpeed: Int
+   
+    var tempC: Int {
+        get {
+            return temp - 273
+        }
+    }
+    init(cityName: String, temp: Int, description: String, humidity : Int, windSpeed: Int, icon: String) {
         self.cityName = cityName
         self.temp = temp
         self.description = description
         self.icon = icon
+        self.humidity = humidity
+        self.windSpeed = windSpeed
     }
 }
