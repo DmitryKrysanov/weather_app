@@ -8,5 +8,6 @@ target 'Weather App' do
   # Pods for Weather App
 
 pod 'lottie-ios'
+pod 'Canvas'
 
 end

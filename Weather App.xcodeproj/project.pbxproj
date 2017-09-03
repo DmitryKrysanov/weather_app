@@ -17,6 +17,7 @@
 		328EB3841F3F654500485165 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328EB3831F3F654500485165 /* Weather.swift */; };
 		32A93C9F1F4B50FC0036A22F /* 50d1.json in Resources */ = {isa = PBXBuildFile; fileRef = 32A93C9E1F4B50FC0036A22F /* 50d1.json */; };
 		32A93CA11F4B59C80036A22F /* 011n.json in Resources */ = {isa = PBXBuildFile; fileRef = 32A93CA01F4B59C80036A22F /* 011n.json */; };
+		32F719481F552FEC00D08F23 /* 04d.json in Resources */ = {isa = PBXBuildFile; fileRef = 32F719471F552FEC00D08F23 /* 04d.json */; };
 		A6EEE6F1BCABF3A90196DA9C /* Pods_Weather_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2AEC2DDD876CE57E4B27C9 /* Pods_Weather_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		328EB3831F3F654500485165 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		32A93C9E1F4B50FC0036A22F /* 50d1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 50d1.json; sourceTree = "<group>"; };
 		32A93CA01F4B59C80036A22F /* 011n.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 011n.json; sourceTree = "<group>"; };
+		32F719471F552FEC00D08F23 /* 04d.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 04d.json; sourceTree = "<group>"; };
 		DAD8DB514018C415A189B485 /* Pods-Weather App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weather App/Pods-Weather App.debug.xcconfig"; sourceTree = "<group>"; };
 		DB28F4641983621EC7245C6C /* Pods-Weather App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weather App/Pods-Weather App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +81,7 @@
 				328131E21F3A413A00F70CD1 /* Assets.xcassets */,
 				328131E41F3A413A00F70CD1 /* LaunchScreen.storyboard */,
 				328131E71F3A413A00F70CD1 /* Info.plist */,
+				32F719471F552FEC00D08F23 /* 04d.json */,
 				32A93CA01F4B59C80036A22F /* 011n.json */,
 				32A93C9E1F4B50FC0036A22F /* 50d1.json */,
 				328EB37F1F3F39ED00485165 /* SetCityViewController.swift */,
@@ -168,6 +171,7 @@
 			files = (
 				328131E61F3A413A00F70CD1 /* LaunchScreen.storyboard in Resources */,
 				328131E31F3A413A00F70CD1 /* Assets.xcassets in Resources */,
+				32F719481F552FEC00D08F23 /* 04d.json in Resources */,
 				328131E11F3A413A00F70CD1 /* Main.storyboard in Resources */,
 				32A93C9F1F4B50FC0036A22F /* 50d1.json in Resources */,
 				32A93CA11F4B59C80036A22F /* 011n.json in Resources */,

@@ -74,18 +74,12 @@ class MainPageViewController: UIViewController, WeatherServiceDelegate, CLLocati
         humidityLabel.text = "\(weather.humidity)"
         windSpeedLabel.text = "\(weather.windSpeed)"
         
-        
-      //  AnimationView().startAnimation(image: weather.icon)
-        
-        // тут будет вставляться анимация!
-     
        
         let startAnimation = LOTAnimationView(name: weather.icon)
         self.view.addSubview(startAnimation)
         
-        startAnimation.frame = CGRect(x: 0, y: 100, width: self.view.bounds.size.width, height: 100)
+        startAnimation.frame = CGRect(x: 0, y: 100, width: self.view.bounds.size.width, height: 44)
         startAnimation.contentMode = .scaleAspectFit
-        startAnimation.autoReverseAnimation = true
         startAnimation.loopAnimation = true
         startAnimation.play()
           //   Do Something

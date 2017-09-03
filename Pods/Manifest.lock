@@ -1,12 +1,15 @@
 PODS:
+  - Canvas (0.1.2)
   - lottie-ios (2.0.5)
 
 DEPENDENCIES:
+  - Canvas
   - lottie-ios
 
 SPEC CHECKSUMS:
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
   lottie-ios: d574e45532c6c06ac03c6d6649f759fb1137297b
 
-PODFILE CHECKSUM: f7e9bcc7377807d9af0966656c6e17a27d095cee
+PODFILE CHECKSUM: 4d99a9a67e1b9195da8573654f173d93859baf07
 
 COCOAPODS: 1.2.1

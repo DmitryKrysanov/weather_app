@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Canvas.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Weather App.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03ADDFEEDC1C4E4333343C36393A8A1C</key>
+		<key>71605C00A97F1B7801FFDB9625644635</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E0BE484815E0BD1E1052B873316884F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6497E6E7D485D7D0D7E0CD8E84BFCD4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -22,11 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4b-og-RJs">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4b-og-RJs" customClass="CSAnimationView">
                                 <rect key="frame" x="124" y="234" width="128" height="72"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCw-bU-oCm">
-                                        <rect key="frame" x="24" y="-6" width="81" height="84"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCw-bU-oCm">
+                                        <rect key="frame" x="34" y="-6" width="60" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="70"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -51,16 +51,18 @@
                                     <constraint firstItem="gCw-bU-oCm" firstAttribute="centerX" secondItem="Y4b-og-RJs" secondAttribute="centerX" id="Z6R-eI-3lr"/>
                                     <constraint firstAttribute="width" constant="128" id="ZNH-nC-Zqj"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="fadeInUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETB-Jm-MxZ">
-                                <rect key="frame" x="176" y="199" width="23" height="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JY1-q3-P0f">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JY1-q3-P0f">
                                 <rect key="frame" x="305" y="28" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Set City">
                                     <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -68,20 +70,42 @@
                                     <action selector="setCityButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MLi-Gw-dY0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOk-p0-uec">
-                                <rect key="frame" x="141.5" y="170" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="MRp-BR-Tg2">
-                                <rect key="frame" x="166" y="110" width="44" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lR3-Wp-jzv" customClass="CSAnimationView">
+                                <rect key="frame" x="16" y="162" width="343" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOk-p0-uec">
+                                        <rect key="frame" x="125" y="12" width="93" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETB-Jm-MxZ">
+                                        <rect key="frame" x="8" y="41" width="327" height="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="H9E-Vv-5xG"/>
-                                    <constraint firstAttribute="width" constant="44" id="dDg-3Z-aia"/>
+                                    <constraint firstItem="ETB-Jm-MxZ" firstAttribute="centerX" secondItem="lR3-Wp-jzv" secondAttribute="centerX" id="C6C-uf-gmW"/>
+                                    <constraint firstItem="ETB-Jm-MxZ" firstAttribute="top" secondItem="lOk-p0-uec" secondAttribute="bottom" constant="8" id="Meh-g4-NTS"/>
+                                    <constraint firstItem="ETB-Jm-MxZ" firstAttribute="leading" secondItem="lR3-Wp-jzv" secondAttribute="leading" constant="8" id="Ov1-7h-WoB"/>
+                                    <constraint firstItem="ETB-Jm-MxZ" firstAttribute="centerX" secondItem="lOk-p0-uec" secondAttribute="centerX" id="R3I-E7-tag"/>
+                                    <constraint firstItem="ETB-Jm-MxZ" firstAttribute="centerX" secondItem="lR3-Wp-jzv" secondAttribute="centerX" id="WWn-Ih-XbD"/>
+                                    <constraint firstItem="ETB-Jm-MxZ" firstAttribute="bottom" secondItem="lR3-Wp-jzv" secondAttribute="bottomMargin" id="ojn-6p-IdH"/>
                                 </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbN-Q4-Yv5">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="fadeIn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbN-Q4-Yv5" customClass="CSAnimationView">
                                 <rect key="frame" x="64" y="489" width="247" height="44"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humidity" translatesAutoresizingMaskIntoConstraints="NO" id="uCF-AD-Cvj">
@@ -91,19 +115,19 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUMIDITY:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wai-xL-Ysv">
-                                        <rect key="frame" x="48" y="15" width="63.5" height="15"/>
+                                        <rect key="frame" x="48" y="15" width="64" height="15"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c2-v0-oEG">
-                                        <rect key="frame" x="157.5" y="15" width="21.5" height="15"/>
+                                        <rect key="frame" x="157" y="15" width="22" height="15"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ik-P9-zdm">
-                                        <rect key="frame" x="187" y="15.5" width="12" height="14.5"/>
+                                        <rect key="frame" x="187" y="15" width="12" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="I9o-42-bDW"/>
                                         </constraints>
@@ -126,8 +150,17 @@
                                     <constraint firstItem="wai-xL-Ysv" firstAttribute="centerY" secondItem="jbN-Q4-Yv5" secondAttribute="centerY" id="gkQ-kQ-31a"/>
                                     <constraint firstItem="uCF-AD-Cvj" firstAttribute="leading" secondItem="jbN-Q4-Yv5" secondAttribute="leadingMargin" id="w17-Ci-YUV"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="fadeInUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-ZW-2Xt">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-ZW-2Xt" customClass="CSAnimationView">
                                 <rect key="frame" x="64" y="543" width="247" height="44"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windSpeed" translatesAutoresizingMaskIntoConstraints="NO" id="Jxn-wf-xOz">
@@ -137,7 +170,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIND SPEED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy8-Uy-a0X">
-                                        <rect key="frame" x="48" y="15" width="79.5" height="15"/>
+                                        <rect key="frame" x="48" y="15" width="80" height="15"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -152,7 +185,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9u-Mp-OPF">
-                                        <rect key="frame" x="164" y="14.5" width="16" height="15"/>
+                                        <rect key="frame" x="164" y="15" width="16" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="16" id="6Zq-JR-ceH"/>
                                         </constraints>
@@ -175,22 +208,31 @@
                                     <constraint firstItem="Jxn-wf-xOz" firstAttribute="centerY" secondItem="vZy-ZW-2Xt" secondAttribute="centerY" id="qxi-od-u1y"/>
                                     <constraint firstItem="iy8-Uy-a0X" firstAttribute="leading" secondItem="Jxn-wf-xOz" secondAttribute="trailing" constant="16" id="r5u-7m-40P"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="type" value="fadeInUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ETB-Jm-MxZ" firstAttribute="top" secondItem="lOk-p0-uec" secondAttribute="bottom" constant="8" id="AB0-e0-EcK"/>
                             <constraint firstItem="vZy-ZW-2Xt" firstAttribute="top" secondItem="jbN-Q4-Yv5" secondAttribute="bottom" constant="10" id="AuG-Q3-rED"/>
-                            <constraint firstItem="ETB-Jm-MxZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ITT-nk-D40"/>
+                            <constraint firstItem="Y4b-og-RJs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="234" id="Nb7-AT-yvi"/>
                             <constraint firstItem="Y4b-og-RJs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QBD-lY-WoS"/>
-                            <constraint firstItem="lOk-p0-uec" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="a4K-1y-Zmz"/>
+                            <constraint firstItem="lR3-Wp-jzv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="142" id="VZG-fM-ikr"/>
+                            <constraint firstItem="lR3-Wp-jzv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WPw-Bp-35B"/>
                             <constraint firstItem="jbN-Q4-Yv5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bxf-r7-LHo"/>
                             <constraint firstItem="vZy-ZW-2Xt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cXO-4A-42D"/>
-                            <constraint firstItem="Y4b-og-RJs" firstAttribute="top" secondItem="ETB-Jm-MxZ" secondAttribute="bottom" constant="20" id="eoA-Q3-kDR"/>
-                            <constraint firstItem="MRp-BR-Tg2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qai-bf-diK"/>
-                            <constraint firstItem="lOk-p0-uec" firstAttribute="top" secondItem="MRp-BR-Tg2" secondAttribute="bottom" constant="16" id="tA3-st-1PL"/>
+                            <constraint firstItem="lR3-Wp-jzv" firstAttribute="trailing" secondItem="JY1-q3-P0f" secondAttribute="trailing" id="hPK-Jq-dz9"/>
+                            <constraint firstItem="Y4b-og-RJs" firstAttribute="top" secondItem="lR3-Wp-jzv" secondAttribute="bottom" constant="8" id="qEJ-tI-XV6"/>
+                            <constraint firstItem="lR3-Wp-jzv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qME-9B-sPU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vZy-ZW-2Xt" secondAttribute="bottom" constant="80" id="tjQ-5X-hQj"/>
-                            <constraint firstItem="lOk-p0-uec" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="why-ea-p5x"/>
+                            <constraint firstItem="JY1-q3-P0f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="xYn-Va-g5D"/>
                         </constraints>
                     </view>
                     <connections>
@@ -258,7 +300,6 @@
     </scenes>
     <resources>
         <image name="humidity" width="24" height="24"/>
-        <image name="sun" width="60" height="60"/>
         <image name="windSpeed" width="24" height="24"/>
     </resources>
 </document>
