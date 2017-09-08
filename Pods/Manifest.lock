@@ -1,15 +1,21 @@
 PODS:
+  - AFNetworking (1.3.4)
   - Canvas (0.1.2)
   - lottie-ios (2.0.5)
+  - OpenWeatherMapAPI (0.0.5):
+    - AFNetworking (~> 1.3.1)
 
 DEPENDENCIES:
   - Canvas
   - lottie-ios
+  - OpenWeatherMapAPI
 
 SPEC CHECKSUMS:
+  AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
   lottie-ios: d574e45532c6c06ac03c6d6649f759fb1137297b
+  OpenWeatherMapAPI: 53613bba3dffc948f852a66a25f512f7a16643e7
 
-PODFILE CHECKSUM: 4d99a9a67e1b9195da8573654f173d93859baf07
+PODFILE CHECKSUM: a49656cdb3e6a749ac16943a35042c9212b006ad
 
 COCOAPODS: 1.2.1

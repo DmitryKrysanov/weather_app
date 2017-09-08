@@ -9,5 +9,6 @@ target 'Weather App' do
 
 pod 'lottie-ios'
 pod 'Canvas'
+pod ‘OpenWeatherMapAPI'
 
 end

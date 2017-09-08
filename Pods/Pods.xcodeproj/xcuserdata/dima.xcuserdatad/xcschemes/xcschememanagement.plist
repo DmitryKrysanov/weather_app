@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Canvas.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OpenWeatherMapAPI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,7 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>71605C00A97F1B7801FFDB9625644635</key>
+		<key>3A1F33D771AD385046DC443ECA7CE523</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>572BD2A40717497D08329FD82D7775D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>756F340B2ED0A24B5E39908EBEE2618A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

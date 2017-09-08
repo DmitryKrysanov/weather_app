@@ -11,11 +11,12 @@ import CoreLocation
 import Lottie
 
 class MainPageViewController: UIViewController, WeatherServiceDelegate, CLLocationManagerDelegate {
+    @IBOutlet weak var animView: UIView!
 
+    @IBOutlet weak var animationView: UIView!
     let weatherService = WeatherService()
     let locationManager = CLLocationManager()
     
-    @IBOutlet weak var AnimationView: UIView!
 
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var TextField: UITextField!
@@ -64,7 +65,6 @@ class MainPageViewController: UIViewController, WeatherServiceDelegate, CLLocati
         self.present(alertViewController, animated: true, completion: nil)
     }
     
-    
     func setWeather(weather: Weather) {
         cityLabel.text = weather.cityName
         cityLabel.text = cityLabel.text?.uppercased()
@@ -73,28 +73,33 @@ class MainPageViewController: UIViewController, WeatherServiceDelegate, CLLocati
         descriptionLabel.text = descriptionLabel.text?.uppercased()
         humidityLabel.text = "\(weather.humidity)"
         windSpeedLabel.text = "\(weather.windSpeed)"
-        
-       
+
         let startAnimation = LOTAnimationView(name: weather.icon)
-        self.view.addSubview(startAnimation)
         
-        startAnimation.frame = CGRect(x: 0, y: 100, width: self.view.bounds.size.width, height: 44)
-        startAnimation.contentMode = .scaleAspectFit
+        startAnimation.frame = CGRect(x: 0, y: 0, width: startAnimation.frame.size.width, height: startAnimation.frame.size.height)
         startAnimation.loopAnimation = true
+        
+        animView.frame = CGRect(x: animView.frame.origin.x, y: animView.frame.origin.y, width: startAnimation.frame.size.width, height: startAnimation.frame.size.height)
+       
+        animView.addSubview(startAnimation)
+        
         startAnimation.play()
           //   Do Something
-        
     }
     
+    func setForecast(forecast: Forecast){
+    //code
+    }
+    
+    
+    
+    
     func getGPSLocation() {
-        print("Starting location Manager")
         locationManager.startUpdatingLocation()
     }
     
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("Did update locations")
-        print(locations)
         self.weatherService.getWeatherForLocation(locations[0])
         locationManager.stopUpdatingLocation()
     }
@@ -106,18 +111,8 @@ class MainPageViewController: UIViewController, WeatherServiceDelegate, CLLocati
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
-        
         self.weatherService.delegate = self
         self.getGPSLocation()
-    
-
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-}
+  }
 
