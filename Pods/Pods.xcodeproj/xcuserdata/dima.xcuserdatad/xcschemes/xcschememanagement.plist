@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>lottie-ios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>572BD2A40717497D08329FD82D7775D4</key>
+		<key>756F340B2ED0A24B5E39908EBEE2618A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>756F340B2ED0A24B5E39908EBEE2618A</key>
+		<key>B5FBF6F0DB53E707A8144D95750855F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBEC91CAF87F3D310807E7E483868EC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

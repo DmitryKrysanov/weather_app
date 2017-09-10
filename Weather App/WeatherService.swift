@@ -19,6 +19,8 @@ class WeatherService {
     
     let openWeatherURLAPIKey = "bdf18d0e06a7caa20d03d92d59797e61"
    
+    //MARK: Get Weather for Location Function
+    
     func getWeatherForLocation(_ location: CLLocation) {
         let lat = location.coordinate.latitude
         let lon = location.coordinate.longitude
@@ -30,18 +32,13 @@ class WeatherService {
         let pathForecast = "http://api.openweathermap.org/data/2.5/forecast?lat=\(lat)&lon=\(lon)&appid=\(openWeatherURLAPIKey)"
         getForecast(city: pathForecast)
     }
-    
 
-    
-    //написать 2 функции. Певая: по текущей позиции, вторая - по введеному городу.
-  //  Первая должна вызываться сразу, вторая после нажатия ОК
-    
-    
+    //MARK: Get Weather Function
     
     func getWeather(city: String) {
         
         let urlString = URL(string: city)    //work with current location
-        if let url = urlString {
+        if urlString != nil {
             let task = URLSession.shared.dataTask(with: urlString!) { (data, response, error) in
                 if error != nil {
                     print(error!)
@@ -67,7 +64,7 @@ class WeatherService {
                                     }
             
                             }
-                            print(weather)
+                           // print(weather)
                         }
                         catch let jsonError as NSError {
                             print("JSON error: \(jsonError.description)")
@@ -79,10 +76,12 @@ class WeatherService {
         }
     }
 
-func getForecast(city: String) {
+    //MARK: Get Forecast Function
+    
+    func getForecast(city: String) {
     
     let urlString = URL(string: city)      //work with current location
-    if let url = urlString {
+    if urlString != nil {
         let task = URLSession.shared.dataTask(with: urlString!) { (data, response, error) in
             if error != nil {
                 print(error!)
@@ -92,21 +91,54 @@ func getForecast(city: String) {
                         let forecastJsonData = try JSONSerialization.jsonObject(with: usableData, options: JSONSerialization.ReadingOptions.mutableContainers) as! [String: AnyObject]
                         
                         let forecastArray: NSArray = (forecastJsonData["list"] as? NSArray)!
-                        let forecastDictionary: NSDictionary = forecastArray[0] as! NSDictionary
+                       
+                        //-- need to use For!
                         
-                         let time = forecastDictionary["dt_txt"] as?  String
-                        print(time)
-                        let forecast = Forecast(time: time!)
-                  
+                        // get first values
+                            let forecastFirstDictionary: NSDictionary = forecastArray[1] as! NSDictionary
+                                let timeFirst = forecastFirstDictionary["dt_txt"] as?  String
                         
+                            let forecastFirstMain: NSDictionary = (forecastFirstDictionary ["main"] as? NSDictionary)!
+                                let tempFirst = forecastFirstMain["temp"] as! Int
+                        
+                            let forecastFirstWeatherArray: NSArray = (forecastFirstDictionary ["weather"] as? NSArray)!
+                                let forecastFirstWeatherDictionary: NSDictionary = forecastFirstWeatherArray[0] as! NSDictionary
+                                    let iconFirst = forecastFirstWeatherDictionary["icon"] as! String
+                        
+                        // get second values
+                            let forecastSecondDictionary: NSDictionary = forecastArray[2] as! NSDictionary
+                                let timeSecond = forecastSecondDictionary["dt_txt"] as?  String
+                        
+                            let forecastSecondMain: NSDictionary = (forecastSecondDictionary ["main"] as? NSDictionary)!
+                                let tempSecond = forecastSecondMain["temp"] as! Int
+                        
+                            let forecastSecondWeatherArray: NSArray = (forecastSecondDictionary ["weather"] as? NSArray)!
+                                let forecastSecondWeatherDictionary: NSDictionary = forecastSecondWeatherArray[0] as! NSDictionary
+                                    let iconSecond = forecastSecondWeatherDictionary["icon"] as! String
+                        
+                         // get third values
+                            let forecastThirdDictionary: NSDictionary = forecastArray[3] as! NSDictionary
+                                let timeThird = forecastThirdDictionary["dt_txt"] as?  String
+                        
+                            let forecastThirdMain: NSDictionary = (forecastThirdDictionary ["main"] as? NSDictionary)!
+                                let tempThird = forecastThirdMain["temp"] as! Int
+                        
+                            let forecastThirdWeatherArray: NSArray = (forecastThirdDictionary ["weather"] as? NSArray)!
+                                let forecastThirdWeatherDictionary: NSDictionary = forecastThirdWeatherArray[0] as! NSDictionary
+                                    let iconThird = forecastThirdWeatherDictionary["icon"] as! String
+                        
+                        //--
+                        
+                            let forecast = Forecast(timeFirst: timeFirst!, tempFirst: tempFirst, iconFirst: iconFirst, timeSecond: timeSecond!, tempSecond: tempSecond, iconSecond: iconSecond, timeThird: timeThird!, tempThird: tempThird, iconThird: iconThird)
+                        
+                       //print(forecast)
+               
                         if self.delegate != nil {
-                            DispatchQueue.global(qos: .userInitiated).async {
+                           
                                 DispatchQueue.main.async {
                                     self.delegate?.setForecast(forecast: forecast)
                                 }
-                            }
                         }
-                      
                     }
                     catch let jsonError as NSError {
                         print("JSON error: \(jsonError.description)")

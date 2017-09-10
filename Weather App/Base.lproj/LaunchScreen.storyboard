@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -59,15 +58,15 @@
                                     <constraint firstItem="Bb8-ss-0WN" firstAttribute="leading" secondItem="c2m-wV-gdh" secondAttribute="leading" constant="20" id="EOx-cs-QNM"/>
                                     <constraint firstItem="LKk-98-7HO" firstAttribute="top" secondItem="c2m-wV-gdh" secondAttribute="top" id="GMA-AY-XQr"/>
                                     <constraint firstItem="7WX-ev-d3n" firstAttribute="top" secondItem="Bb8-ss-0WN" secondAttribute="bottom" id="N9J-je-kH6"/>
-                                    <constraint firstAttribute="width" secondItem="c2m-wV-gdh" secondAttribute="height" multiplier="167:125" constant="-2.6720000000000255" id="Yhx-Ty-v9F"/>
                                     <constraint firstItem="Bb8-ss-0WN" firstAttribute="top" secondItem="LKk-98-7HO" secondAttribute="bottom" id="ZL3-IE-ZhC"/>
+                                    <constraint firstAttribute="height" constant="252" id="aSD-c9-YWa"/>
                                     <constraint firstItem="Bb8-ss-0WN" firstAttribute="top" secondItem="LKk-98-7HO" secondAttribute="bottom" id="qvO-T0-HIl"/>
                                     <constraint firstItem="7WX-ev-d3n" firstAttribute="leading" secondItem="c2m-wV-gdh" secondAttribute="leading" constant="20" id="xwg-Jh-Qav"/>
                                     <constraint firstAttribute="bottom" secondItem="7WX-ev-d3n" secondAttribute="bottom" id="zG3-zl-HrT"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.87450980392156863" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="c2m-wV-gdh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="0.5" id="Edu-4h-6kH"/>
                             <constraint firstItem="c2m-wV-gdh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="M03-xT-iFY"/>

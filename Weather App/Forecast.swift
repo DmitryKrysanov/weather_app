@@ -9,26 +9,52 @@
 import Foundation
 
 struct Forecast {
-    let time: String
-//    let cityName: String
-//    let temp: Int
-//    let icon: String
-//    let humidity: Int
-//    
-//    var tempC: Int {
-//        get {
-//            return temp - 273
-//        }
-//    }
-//    init(cityName: String, temp: Int, humidity : Int, icon: String) {
-//        self.cityName = cityName
-//        self.temp = temp
-//        self.icon = icon
-//        self.humidity = humidity
-//    }
-//}
+    let timeFirst: String
+    let tempFirst: Int
+    let iconFirst: String
+    
+    let timeSecond: String
+    let tempSecond: Int
+    let iconSecond: String
+    
+    let timeThird: String
+    let tempThird: Int
+    let iconThird: String
 
-    init(time: String) {
-        self.time = time
+  
+    //-- need to use function!
+    
+    var tempFirstC: Int {
+        get {
+            return tempFirst - 273
+        }
+    }
+    
+    var tempSecondC: Int {
+        get {
+            return tempSecond - 273
+        }
+    }
+    
+    var tempThirdC: Int {
+        get {
+            return tempThird - 273
+        }
+    }
+    
+    //--
+
+    init(timeFirst: String, tempFirst: Int, iconFirst: String, timeSecond: String, tempSecond: Int, iconSecond: String, timeThird: String, tempThird: Int, iconThird: String) {
+        self.timeFirst = timeFirst
+        self.tempFirst = tempFirst
+        self.iconFirst = iconFirst
+        
+        self.timeSecond = timeSecond
+        self.tempSecond = tempSecond
+        self.iconSecond = iconSecond
+        
+        self.timeThird = timeThird
+        self.tempThird = tempThird
+        self.iconThird = iconThird
     }
 }

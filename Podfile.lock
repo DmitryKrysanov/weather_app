@@ -4,18 +4,21 @@ PODS:
   - lottie-ios (2.0.5)
   - OpenWeatherMapAPI (0.0.5):
     - AFNetworking (~> 1.3.1)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Canvas
   - lottie-ios
   - OpenWeatherMapAPI
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
   lottie-ios: d574e45532c6c06ac03c6d6649f759fb1137297b
   OpenWeatherMapAPI: 53613bba3dffc948f852a66a25f512f7a16643e7
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: a49656cdb3e6a749ac16943a35042c9212b006ad
+PODFILE CHECKSUM: 642ff6cd612b7fd9b104906e8463fa76ec4b4bf6
 
 COCOAPODS: 1.2.1
